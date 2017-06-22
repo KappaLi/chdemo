@@ -1,0 +1,34 @@
+﻿@model List<chdemo.Suggest>
+@{
+    ViewBag.Title = "Home Page";
+}
+    <h2>鍋爐建議參數</h2>
+
+    <div class="jumbotron">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>時間</td>
+                    <td>擋板角度</td>
+                    <td>輸送帶轉速</td>
+                    <td>進風量</td>
+                    <td>進水量</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pd in this.Model)
+            {
+                    <tr>
+                        <td>@pd.Time</td>
+                        <td>@pd.Angel</td>
+                        <td>@pd.Rpm</td>
+                        <td>@pd.Wind</td>
+                        <td>@pd.Water</td>
+                        <td>@Html.ActionLink("鍋爐蒸汽壓限制", "Suggest", "Home")</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
