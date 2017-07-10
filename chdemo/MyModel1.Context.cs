@@ -13,10 +13,10 @@ namespace chdemo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database1Entities : DbContext
+    public partial class kappaEntities : DbContext
     {
-        public Database1Entities()
-            : base("name=Database1Entities")
+        public kappaEntities()
+            : base("name=kappaEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace chdemo
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Table> Table { get; set; }
+        public virtual DbSet<test> test { get; set; }
     }
 }

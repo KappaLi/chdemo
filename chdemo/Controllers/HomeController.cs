@@ -22,20 +22,20 @@ namespace chdemo.Controllers
 
         public ActionResult loaddata()
         {
-            using (chdemo.Database1Entities dc = new chdemo.Database1Entities())
+            using (chdemo.kappaEntities dc = new chdemo.kappaEntities())
             {
-                var data = dc.Table.OrderBy(a => a.Time).ToList();
+                var data = dc.test.OrderBy(a => a.Time).ToList();
                 return Json(new { data = data }, JsonRequestBehavior.AllowGet);
             }
         }
 
         public ActionResult Contact()
         {
-            List<Suggest> result = new List<Suggest>();
+            List<test> result = new List<test>();
 
-            using (Database1Entities2 db = new Database1Entities2())
+            using (kappaEntities db = new kappaEntities())
             {
-                result = (from s in db.Suggest select s).ToList();
+                result = (from s in db.test select s).ToList();
                 return View(result);
             }
         }
@@ -49,18 +49,18 @@ namespace chdemo.Controllers
 
         public ActionResult GetChartData()
         {
-            List<Table> data = new List<Table>();
+            List<test> data = new List<test>();
             //Here MyDatabaseEntities  is our dbContext
-            using (Database1Entities dc = new Database1Entities())
+            using (kappaEntities dc = new kappaEntities())
             {
-                data = dc.Table.ToList();
+                data = dc.test.ToList();
             }
 
 
             var dt = new VisualizationDataTable();
 
-            dt.AddColumn("Date", "string");
-            dt.AddColumn("Events", "number");
+            dt.AddColumn("Time", "string");
+            dt.AddColumn("Pressure", "number");
 
             foreach (var item in data)
             {

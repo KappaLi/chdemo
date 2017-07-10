@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d219ebfe7c51420e8546acb765d6b7b7" Name="Diagram1">
-        <EntityTypeShape EntityType="Database1Model1.Suggest" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="d233cead47814951bae126c1a734fb7a" Name="Diagram1">
+        <EntityTypeShape EntityType="kappaModel.test" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
